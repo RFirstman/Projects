@@ -37,6 +37,16 @@ def convert_to_mbit(value):
 def send_stat(value):
     print("{0:0.3f} Mb".format(convert_to_mbit(value)))
 
+
+
 if __name__ == "__main__":
     main()
 ```
+
+A natural next step is to record the bandwidth usage for later analyzing. For this, I turn to the
+[pandas](https://pandas.pydata.org/) library to easily store and work with the data for a variety
+of uses. Considering that I do not yet have a well-formed direction for this tool, pandas seems
+like a safe starting point.
+
+In the code from StackOverflow, only the total network usage is printed. That is, the number of
+bytes sent are added to the number received are printed out.
